@@ -1,0 +1,172 @@
+# BAI2 to Sage Intacct Reconciliation Configuration
+# Default configuration file - customize as needed
+
+# Input file settings
+input:
+  bai2:
+    encoding: utf-8
+    date_format: "%y%m%d"
+
+  intacct:
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%m/%d/%Y"
+    column_mappings:
+      date: Date
+      description: Description
+      debit: Debit
+      credit: Credit
+      reference: Reference
+      vendor: Vendor
+      gl_account: GL_Account
+      transaction_id: Transaction_ID
+
+# Matching rules configuration
+matching:
+  tiers:
+    - name: exact_reference_amount_date
+      description: Exact match on reference, amount, and date
+      priority: 1
+      enabled: true
+      rules:
+        - field: reference
+          match_type: exact
+          required: true
+        - field: amount
+          match_type: exact
+          required: true
+        - field: date
+          match_type: exact
+          required: true
+
+    - name: exact_reference_amount_fuzzy_date
+      description: Exact reference and amount with date tolerance
+      priority: 2
+      enabled: true
+      rules:
+        - field: reference
+          match_type: exact
+          required: true
+        - field: amount
+          match_type: exact
+          required: true
+        - field: date
+          match_type: tolerance
+          tolerance_days: 3
+          required: true
+
+    - name: exact_reference_fuzzy_amount
+      description: Exact reference with amount tolerance
+      priority: 3
+      enabled: true
+      rules:
+        - field: reference
+          match_type: exact
+          required: true
+        - field: amount
+          match_type: tolerance
+          tolerance_amount: 10.00
+          tolerance_percent: 1.0
+          required: true
+        - field: date
+          match_type: tolerance
+          tolerance_days: 5
+          required: false
+
+    - name: fuzzy_description_amount
+      description: Fuzzy description match with exact amount
+      priority: 4
+      enabled: true
+      rules:
+        - field: description
+          match_type: fuzzy
+          similarity_threshold: 0.85
+          required: true
+        - field: amount
+          match_type: exact
+          required: true
+        - field: date
+          match_type: tolerance
+          tolerance_days: 7
+          required: true
+
+  settings:
+    allow_one_to_many: true
+    allow_many_to_one: true
+    max_matches_per_transaction: 5
+    case_sensitive: false
+    normalize_references: true
+    reference_normalize_pattern: "[^a-zA-Z0-9]"
+
+# Transaction type mappings (BAI2 type codes to categories)
+transaction_types:
+  credits:
+    108: Interest Earned
+    115: Lockbox Deposit
+    165: ACH Credit
+    175: Cash Deposit
+    195: Wire Transfer In
+  debits:
+    455: ACH Debit
+    475: Check Paid
+    495: Wire Transfer Out
+    561: Bank Service Fee
+
+# Transactions to exclude from reconciliation
+exclusions:
+  # BAI2 type codes to flag as "Bank Only" (not expected in GL)
+  bank_only_type_codes:
+    - 561  # Bank Service Fee
+    - 108  # Interest Earned
+
+  # Intacct GL account patterns to flag as "GL Only"
+  gl_only_account_patterns:
+    - "1200-*"      # Inventory
+    - "1500-*"      # Prepaid
+    - "4000-*"      # Revenue (non-cash)
+    - "5000-*"      # Salaries
+    - "6050-*"      # Depreciation
+    - "7000-*"      # Interest Expense
+    - "9000-*"      # Adjustments
+
+  # Reference patterns for GL-only entries
+  gl_only_reference_patterns:
+    - "PREPAID-*"
+    - "PAYROLL-*"
+    - "REV-*"
+    - "DEPR-*"
+    - "INV-ADJ-*"
+    - "INT-EXP-*"
+    - "DEFREV-*"
+    - "RECLASS-*"
+
+# Output report configuration
+output:
+  excel:
+    filename_template: "reconciliation_report_{date}_{time}.xlsx"
+    include_timestamp: true
+
+  sheets:
+    summary:
+      enabled: true
+      name: Summary
+    matched:
+      enabled: true
+      name: Matched Transactions
+    bank_only:
+      enabled: true
+      name: Bank Only
+    intacct_only:
+      enabled: true
+      name: Intacct Only
+    amount_variances:
+      enabled: true
+      name: Amount Variances
+    audit_trail:
+      enabled: true
+      name: Audit Trail
+
+# Logging configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

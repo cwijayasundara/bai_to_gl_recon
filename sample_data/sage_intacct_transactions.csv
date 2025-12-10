@@ -1,0 +1,66 @@
+Date,Description,Debit,Credit,Reference,Vendor,GL_Account,Transaction_ID
+11/01/2024,Customer Payment - Invoice INV-2024-001,,1250.00,DEP20241101001,Customer ABC,1000-Cash,TXN-INT-001
+11/01/2024,Customer Payment - Invoice INV-2024-002,,2500.00,DEP20241101002,Customer DEF,1000-Cash,TXN-INT-002
+11/01/2024,Payment to Office Supplies Co,750.00,,CHK10001,Office Supplies Co,2000-AP,TXN-INT-003
+11/01/2024,Wire Transfer from ABC Corporation,,5000.00,WIRE-IN-001,ABC Corporation,1000-Cash,TXN-INT-004
+11/01/2024,ACH Credit - Refund from Vendor,,850.00,ACH-CR-001,Tech Vendor LLC,1000-Cash,TXN-INT-005
+11/01/2024,ACH Debit - Insurance Premium,450.00,,ACH-DB-001,State Insurance,6100-Insurance,TXN-INT-006
+11/02/2024,Customer Payment - Invoice INV-2024-003,,1800.00,DEP20241102001,Customer GHI,1000-Cash,TXN-INT-007
+11/02/2024,Payment to Marketing Agency,1200.00,,CHK10002,Marketing Agency Inc,6200-Marketing,TXN-INT-008
+11/02/2024,Wire Transfer to Supplier XYZ,3500.00,,WIRE-OUT-001,Supplier XYZ,2000-AP,TXN-INT-009
+11/03/2024,Cash Deposit - Store Location 1,,950.00,DEP20241103001,Internal Transfer,1000-Cash,TXN-INT-010
+11/04/2024,Customer Payment - Invoice INV-2024-004,,4200.00,DEP20241104001,Customer JKL,1000-Cash,TXN-INT-011
+11/04/2024,Payment to Cleaning Services,650.00,,CHK10003,CleanPro Services,6300-Facilities,TXN-INT-012
+11/04/2024,Wire Transfer from Delta Industries,,7500.00,WIRE-IN-002,Delta Industries,1000-Cash,TXN-INT-013
+11/05/2024,ACH Debit - Utility Bill,275.00,,ACH-DB-002,City Power & Water,6400-Utilities,TXN-INT-014
+11/05/2024,ACH Credit - Commission Payment,,1100.00,ACH-CR-002,Sales Partner Co,1000-Cash,TXN-INT-015
+11/05/2024,Payment to IT Services Inc,2300.00,,CHK10004,IT Services Inc,6500-IT,TXN-INT-016
+11/06/2024,Wire Transfer to Equipment Vendor,1850.00,,WIRE-OUT-002,Equipment Vendor,2000-AP,TXN-INT-017
+11/06/2024,Customer Payment - Invoice INV-2024-005,,3150.00,DEP20241105001,Customer MNO,1000-Cash,TXN-INT-018
+11/07/2024,Cash Deposit - Store Location 2,,780.00,DEP20241106001,Internal Transfer,1000-Cash,TXN-INT-019
+11/07/2024,Wire Transfer from Global Partners,,6200.00,WIRE-IN-003,Global Partners Ltd,1000-Cash,TXN-INT-020
+11/07/2024,Payment to Legal Services LLC,890.00,,CHK10005,Legal Services LLC,6600-Legal,TXN-INT-021
+11/08/2024,ACH Debit - Loan Payment,525.00,,ACH-DB-003,First National Bank,2100-Notes Payable,TXN-INT-022
+11/08/2024,Customer Payment - Invoice INV-2024-006,,1950.00,DEP20241107001,Customer PQR,1000-Cash,TXN-INT-023
+11/09/2024,Wire Transfer to Manufacturing Co,4250.00,,WIRE-OUT-003,Manufacturing Co,2000-AP,TXN-INT-024
+11/09/2024,ACH Credit - Rebate Payment,,670.00,ACH-CR-003,Wholesale Supplier,1000-Cash,TXN-INT-025
+11/10/2024,Payment to Consulting Group,1500.00,,CHK10006,Consulting Group,6700-Consulting,TXN-INT-026
+11/10/2024,Customer Payment - Invoice INV-2024-007,,2800.00,DEP20241108001,Customer STU,1000-Cash,TXN-INT-027
+11/11/2024,Wire Transfer from Tech Solutions,,8900.00,WIRE-IN-004,Tech Solutions Inc,1000-Cash,TXN-INT-028
+11/11/2024,ACH Debit - Software Subscription,385.00,,ACH-DB-004,CloudSoft Inc,6500-IT,TXN-INT-029
+11/12/2024,Payment to Janitorial Services,720.00,,CHK10007,Janitorial Services,6300-Facilities,TXN-INT-030
+11/12/2024,Wire Transfer to Raw Materials Inc,2650.00,,WIRE-OUT-004,Raw Materials Inc,2000-AP,TXN-INT-031
+11/13/2024,Cash Deposit - Store Location 3,,1560.00,DEP20241109001,Internal Transfer,1000-Cash,TXN-INT-032
+11/14/2024,Customer Payment - Invoice INV-2024-008,,4450.00,DEP20241110001,Customer VWX,1000-Cash,TXN-INT-033
+11/14/2024,ACH Credit - Partner Distribution,,930.00,ACH-CR-004,Distribution Partner,1000-Cash,TXN-INT-034
+11/15/2024,Payment to Advertising Agency,1880.00,,CHK10008,Advertising Agency,6200-Marketing,TXN-INT-035
+11/16/2024,Wire Transfer from Eastern Corp,,5350.00,WIRE-IN-005,Eastern Corp,1000-Cash,TXN-INT-036
+11/16/2024,ACH Debit - Equipment Lease,610.00,,ACH-DB-005,Lease Finance Co,6800-Lease,TXN-INT-037
+11/17/2024,Customer Payment - Invoice INV-2024-009,,3720.00,DEP20241112001,Customer YZA,1000-Cash,TXN-INT-038
+11/18/2024,Wire Transfer to Logistics Provider,3150.00,,WIRE-OUT-005,Logistics Provider,2000-AP,TXN-INT-039
+11/18/2024,Payment to Security Services,980.00,,CHK10009,Security Services,6300-Facilities,TXN-INT-040
+11/19/2024,Cash Deposit - Store Location 4,,1240.00,DEP20241113001,Internal Transfer,1000-Cash,TXN-INT-041
+11/20/2024,Customer Payment - Invoice INV-2024-010,,2670.00,DEP20241114001,Customer BCD,1000-Cash,TXN-INT-042
+11/20/2024,Wire Transfer from Northern Alliance,,4450.00,WIRE-IN-006,Northern Alliance,1000-Cash,TXN-INT-043
+11/21/2024,Payment to HR Consulting,1560.00,,CHK10010,HR Consulting,6700-Consulting,TXN-INT-044
+11/21/2024,ACH Debit - Health Insurance,730.00,,ACH-DB-006,Health Insurance Co,6100-Insurance,TXN-INT-045
+11/22/2024,ACH Credit - Vendor Refund,,480.00,ACH-CR-005,Office Depot,1000-Cash,TXN-INT-046
+11/22/2024,Wire Transfer to Cloud Services,1980.00,,WIRE-OUT-006,Cloud Services Inc,6500-IT,TXN-INT-047
+11/23/2024,Payment to Travel Agency,820.00,,CHK10011,Travel Agency,6900-Travel,TXN-INT-048
+11/25/2024,Wire Transfer from Pacific Trading,,6720.00,WIRE-IN-007,Pacific Trading,1000-Cash,TXN-INT-049
+11/26/2024,Cash Deposit - Store Location 5,,2030.00,DEP20241117001,Internal Transfer,1000-Cash,TXN-INT-050
+11/27/2024,Wire Transfer to Import/Export Co,2870.00,,WIRE-OUT-007,Import/Export Co,2000-AP,TXN-INT-051
+11/28/2024,Payment to Training Services,1340.00,,CHK10012,Training Services,6700-Consulting,TXN-INT-052
+11/29/2024,Customer Payment - Invoice INV-2024-012,,3980.00,DEP20241118001,Customer EFG,1000-Cash,TXN-INT-053
+11/05/2024,Prepaid Expense - Annual Software License,2400.00,,PREPAID-001,Enterprise Software Co,1500-Prepaid,TXN-INT-054
+11/08/2024,Accrued Payroll Entry,15000.00,,PAYROLL-001,Internal - Payroll,5000-Salaries,TXN-INT-055
+11/12/2024,Revenue Recognition - Service Contract,,8500.00,REV-001,Customer HIJ,4000-Revenue,TXN-INT-056
+11/15/2024,Depreciation Expense Entry,1200.00,,DEPR-001,Internal - Fixed Assets,6050-Depreciation,TXN-INT-057
+11/18/2024,Inventory Adjustment,3500.00,,INV-ADJ-001,Internal - Inventory,1200-Inventory,TXN-INT-058
+11/22/2024,Prepaid Insurance Allocation,450.00,,PREPAID-002,Internal - Prepaid,6100-Insurance,TXN-INT-059
+11/25/2024,Accrued Interest Expense,275.00,,INT-EXP-001,First National Bank,7000-Interest,TXN-INT-060
+11/28/2024,Deferred Revenue Recognition,,4200.00,DEFREV-001,Customer KLM,4000-Revenue,TXN-INT-061
+11/30/2024,Month-End Closing Entry - Reclassification,1850.00,,RECLASS-001,Internal - Adjustments,9000-Adjustments,TXN-INT-062
+11/30/2024,Pending Vendor Payment - Not Yet Cleared,2200.00,,CHK10013,Vendor NOP,2000-AP,TXN-INT-063
+
+
